@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'items/new'
+
+  get 'items/create'
+
+  get 'items/edit'
+
+  get 'items/destroy'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/destroy'
+
   resources :lists
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
