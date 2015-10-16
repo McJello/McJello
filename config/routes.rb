@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
 
-  root "lists#index"
+  resources :tasks do
+    put :sort, on: :collection
+  end
 
   resources :users
 
-  resources :lists do
-    resources :tasks
-    end
+  resources :lists
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

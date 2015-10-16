@@ -4,6 +4,8 @@ class ListsController < ApplicationController
   # GET /lists
   def index
     @lists = List.all
+    @tasks = Task.all.each
+    @task = Task.new
   end
 
   # GET /lists/1
