@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>Priority:</strong>
-  <%= @list.priority %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @list.user_id %>
+  <%= @list.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_list_path(@list) %> |

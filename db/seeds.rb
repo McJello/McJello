@@ -10,8 +10,8 @@ user=User.create(name: "user", email: "user@email.com", password: "test")
 list=List.create(name: "Todo", priority: 0)
 user.lists<<list
 
-t1=Task.create(title: "Make ERD", priority: 0, complete: true)
-t2=Task.create(title: "Draw page layout", priority: 1, complete: true)
+t1=Task.create(title: "Make ERD", priority: 0, complete: true, due_on: "Sun, 16 Oct 2016")
+t2=Task.create(title: "Draw page layout", priority: 1, complete: true, due_on: "Sun, 16 Oct 2016")
 t3=Task.create(title: "Drag and drop", priority: 2, complete: false)
 list.tasks<<t1
 list.tasks<<t2

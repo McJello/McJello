@@ -6,13 +6,17 @@
 </p>
 
 <p>
+  <% if !@task.description==nil %>
   <strong>Description:</strong>
   <%= @task.description %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Priority:</strong>
-  <%= @task.priority %>
+  <% if !@task.due_on==nil %>
+  <strong>Due on:</strong>
+  <%= @task.due_on %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
