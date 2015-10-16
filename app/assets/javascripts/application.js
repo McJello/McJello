@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require html.sortable
 //= require_tree .
+
+
+$(document).ready(ready);
