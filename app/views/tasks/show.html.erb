@@ -6,14 +6,14 @@
 </p>
 
 <p>
-  <% if !@task.description==nil %>
+  <% if @task.description!=nil %>
   <strong>Description:</strong>
   <%= @task.description %>
   <% end %>
 </p>
 
 <p>
-  <% if !@task.due_on==nil %>
+  <% if @task.due_on!=nil %>
   <strong>Due on:</strong>
   <%= @task.due_on %>
   <% end %>
