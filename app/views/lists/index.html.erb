@@ -2,30 +2,14 @@
 
 <h1>Listing Lists</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.name %></td>
-        <td><%= list.position %></td>
-        <td><%= list.user_id %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row">
+  <div class="col-md-5 col-md-offset-4 sortable">
+    <% if @tasks.any? %>
+        <%= render partial: 'tasks/task' %>
+    <% else %>
+    <p>No tasks found <%= link_to "Create Task", new_task_path %></p>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  </div>
+</div>
 
 <%= link_to 'New List', new_list_path %>

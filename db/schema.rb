@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016005625) do
+ActiveRecord::Schema.define(version: 20151016193512) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
@@ -24,10 +24,21 @@ ActiveRecord::Schema.define(version: 20151016005625) do
 
   create_table "lists", force: :cascade do |t|
     t.string   "name"
-    t.integer  "position"
+    t.integer  "priority"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "priority"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "complete",    default: false
+    t.integer  "list_id"
+    t.date     "due_on"
   end
 
   create_table "users", force: :cascade do |t|
