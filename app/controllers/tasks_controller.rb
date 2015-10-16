@@ -7,7 +7,7 @@ class TasksController < ApplicationController
     end
     render :nothing => true
   end
-  
+
   # GET /tasks
   def index
     @tasks = Task.all
@@ -15,6 +15,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1
   def show
+    @task = Task.find(params[:id])
   end
 
   # GET /tasks/new
@@ -60,6 +61,6 @@ class TasksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def task_params
-      params.require(:task).permit(:title, :description, :priority)
+      params.require(:task).permit(:title, :description, :priority, :complete, :due_on)
     end
 end
