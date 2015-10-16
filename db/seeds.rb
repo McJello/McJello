@@ -5,10 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(name: "user", email: "user@email.com", password_digest: "test")
+user=User.create(name: "user", email: "user@email.com", password: "test")
 
-List.create(name: "Todo", position: 0)
+list=List.create(name: "Todo", priority: 0)
+user.lists<<list
 
-Item.create(name: "Make ERD", position: 0, complete: true)
-Item.create(name: "Draw page layout", position: 1, complete: true)
-Item.create(name: "Drag and drop", position: 2, complete: false)
+t1=Task.create(title: "Make ERD", priority: 0, complete: true)
+t2=Task.create(title: "Draw page layout", priority: 1, complete: true)
+t3=Task.create(title: "Drag and drop", priority: 2, complete: false)
+list.tasks<<t1
+list.tasks<<t2
+list.tasks<<t3
