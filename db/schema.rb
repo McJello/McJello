@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20151016174357) do
 
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.date     "due_on"
+    t.integer  "list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lists", force: :cascade do |t|
     t.string   "name"
     t.integer  "priority"
