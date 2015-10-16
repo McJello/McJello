@@ -16,7 +16,6 @@
     <% @lists.each do |list| %>
       <tr>
         <td><%= list.name %></td>
-        <td><%= list.position %></td>
         <td><%= list.user_id %></td>
         <td><%= link_to 'Show', list %></td>
         <td><%= link_to 'Edit', edit_list_path(list) %></td>
