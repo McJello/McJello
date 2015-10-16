@@ -7,11 +7,5 @@
     <%= truncate task.description, length: 50 %>
   </br>Due on: <%= task.due_on %>
   </div>
-  <% @task=task %>
-  <%= form_for @task do |f| %>
-    <div class="field">
-      <%= f.label "Completed?" %> <br />
-      <%= f.check_box :complete %> <br />
-    </div>
-  <% end %>
+  <%= button_tag "(╯°□°）╯︵ ┻━┻" %> 
 </div>
