@@ -10,7 +10,8 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
-    @tasks = Task.all
+    @incomplete = Task.where(complete: false)
+    @complete = Task.where(complete: true)
   end
 
   # GET /tasks/1
@@ -29,13 +30,23 @@ class TasksController < ApplicationController
 
   # POST /tasks
   def create
-    @task = Task.new(task_params)
-
-    if @task.save
-      redirect_to @task, notice: 'Task was successfully created.'
-    else
-      render :new
+    @task = Task.create!(task_params)
+    respond_to do |format|
+      format.html { redirect_to tasks_url }
+      format.js
     end
+
+    # if @task.save
+    #   redirect_to @task, notice: 'Task was successfully created.'
+    # else
+    #   render :new
+    # end
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(complete: true)
+    @id = params[:id]
   end
 
   # PATCH/PUT /tasks/1

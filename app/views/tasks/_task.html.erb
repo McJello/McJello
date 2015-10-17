@@ -1,9 +1,10 @@
 
 <div class="panel panel-default" data-id="<%= task.id %>">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= truncate task.title, length: 41 %></h3>
+    <h4 class="panel-title"><%= truncate task.title, length: 41 %></h4>
   </div>
   <div class="panel-body">
     <%= truncate task.description, length: 50 %>
   </div>
+  <%= button_tag "complete-#{task.id}", class: "btn btn-primary" %>
 </div>

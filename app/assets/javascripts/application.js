@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require html.sortable
 //= require_tree .
+$(function() {
+  $(".complete").click( function() {
+    $.ajax({
+      url: "/complete/" + this.id,
+      type: "patch"
+    });
+  })
+})
