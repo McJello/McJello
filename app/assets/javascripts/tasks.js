@@ -13,9 +13,6 @@ ready = function() {
   // call set_positions function
   set_positions();
 
-  $('.sortable').sortable();
-
-  // after the order changes
   $('.sortable').sortable().bind('sortupdate', function(e, ui) {
     // array to store new order
     updated_order = []
@@ -23,7 +20,7 @@ ready = function() {
     set_positions();
 
     // populate the updated_order array with the new task positions
-    $('.panel.panel-default').each(function(i) {
+    $(e.target).find('form').each(function(i) {
       updated_order.push({
         id: $(this).data("id"),
         position: i + 1
