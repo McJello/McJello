@@ -1,19 +1,9 @@
 <%= form_for task, remote: true do |f| %>
+<a href="javascript:void(0)" class="flex-box">
   <%= f.check_box :complete %>
-  <%= f.submit "Update" %>
-  <%= f.label :complete, task.title %>
-  <%= link_to "(trash)", task, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+  <%= f.submit "Complete" %>
+  <h1 class="flex-title"><%= task.title %></h1>
+  <p><%= truncate task.description, length: 50 %></p>
+  <%= link_to "(╯°□°）╯︵ ┻━┻", task, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+</a>
 <% end %>
-
-
-<!--
-<div class="panel panel-default" data-id="<%= task.id %>">
-  <div class="panel-heading">
-    <h4 class="panel-title"><%# truncate task.title, length: 41 %></h4>
-  </div>
-  <div class="panel-body">
-    <%# truncate task.description, length: 50 %>
-  </div>
-  <%# check_box_tag "complete", "complete-#{task.id}", class: "btn btn-primary" %>
-</div>
--->
