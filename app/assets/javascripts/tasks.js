@@ -50,7 +50,7 @@ $(document).on('page:load', ready);
 jQuery.fn.submitOnCheck = function() {
   this.find('input[type=submit]').remove();
   this.find('input[type=checkbox]').click(function() {
-    $(this).parent('form').submit();
+    $(this).parents('form').submit();
   });
   return this;
 }

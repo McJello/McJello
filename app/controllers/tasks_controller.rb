@@ -10,6 +10,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
+    @tasks = Task.all
     @incomplete = Task.where(complete: false)
     @complete = Task.where(complete: true)
   end

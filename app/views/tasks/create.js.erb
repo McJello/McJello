@@ -1,4 +1,4 @@
 $("#new_task").remove();
 $("#new_link").show();
-$("#incomplete").append("<%= j render(@task) %>");
+$("#incomplete .flex-boxes").append("<%= j render(@task) %>").ready(ready);
 $("#edit_task_<%= @task.id %>").submitOnCheck();
