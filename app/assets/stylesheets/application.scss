@@ -9,12 +9,11 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require_tree .
  *= require_self
  */
  @import "compass";
  @import "bourbon";
- @import "neat";
 
  h1 {
      margin: 0;
@@ -43,7 +42,7 @@
    $flex-box-width: 18em;
    $flex-box-color: transparentize($base-font-color, 0.3);
    $flex-box-top-colors:
-     tomato,
+     red,
      #72BFBF,
      #92B1E3,
      #E3D743,
