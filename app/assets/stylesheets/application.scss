@@ -21,10 +21,14 @@
      font-family: 'Nunito', sans-serif;
    }
 
- h2, h3, p {
+ h2, h3, p, a {
       margin: 0;
       font-family: 'Varela Round', sans-serif;
     }
+
+ input {
+   font-family: 'Varela Round', sans-serif;
+ }
 
  .flex-boxes {
    $base-border-radius: 3px !default;
