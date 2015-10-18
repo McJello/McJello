@@ -1,17 +1,20 @@
 <p id="notice"><%= notice %></p>
-
+<head>
+  <link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+</head>
 <h1>Your To-Dos:</h1>
 
 <div class="row">
   <h2>Incomplete tasks</h2>
   <div id="incomplete">
-    <div class="col-md-5 col-md-offset-4 sortable">
+    <div class="sortable flex-boxes">
       <%= render @incomplete %>
     </div>
   </div>
   <h2>Complete tasks</h2>
   <div id="complete">
-    <div class="col-md-5 col-md-offset-4 sortable">
+    <div class="sortable flex-boxes">
       <%= render @complete %>
     </div>
   </div>

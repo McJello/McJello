@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require html.sortable
 @import "bourbon";
+@import "neat";
 
 $(document).ready(ready);
 
