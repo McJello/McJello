@@ -13,10 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require html.sortable
-@import "bourbon";
-@import "neat";
+//= require_tree .
 
-$(document).ready(ready);
 
 $(function() {
   $(".complete").click( function() {

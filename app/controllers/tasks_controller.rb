@@ -10,6 +10,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
+    @tasks = Task.all
     @incomplete = Task.where(complete: false)
     @complete = Task.where(complete: true)
   end
@@ -53,15 +54,21 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.update_attributes!(task_params)
+    # @task.assign_attributes(task_params)
+    # if @task.changes[complete]!=nil
+    #   last_task = Task.where(complete: @task.complete).order(priority: :desc).first
+    #   new_priority = 1
+    #   if last_task
+    #     new_priority = last_task.priority + 1
+    #   end
+    #   @task.priority = new_priority
+    # end
+    # @task.save
+
     respond_to do |format|
       format.html { redirect_to tasks_url }
       format.js
     end
-    # if @task.update(task_params)
-    #   redirect_to @task, notice: 'Task was successfully updated.'
-    # else
-    #   render :edit
-    # end
   end
 
   # DELETE /tasks/1
