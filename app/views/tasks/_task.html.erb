@@ -3,7 +3,7 @@
   <%= f.check_box :complete %>
   <%= f.submit "Complete" %>
   <h1 class="flex-title"><%= task.title %></h1>
-  <p><%= truncate task.description, length: 50 %></p>
-  <%= link_to "(╯°□°）╯︵ ┻━┻", task, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
-</a>
+  <p><strong><%= truncate task.description, length: 50 %></strong></p>
+  <p class="da">Due on: <%= task.due_on %></p>
+  <%= link_to "(╯°□°）╯︵ ┻━┻", task, method: :delete, data: { confirm: "Are you sure?" }, remote: true,:class=>"checkout" %>
 <% end %>

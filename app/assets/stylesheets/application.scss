@@ -14,14 +14,31 @@
  */
  @import "bourbon";
 
+ body {
+   background-color: #FFFF7B;
+ }
+
+ .checkout {
+   padding: 2px;
+   border-top: red solid 2px;
+   border-radius: 3px;
+   color: #575852;
+   font-weight: 900;
+   background-color: #FF7B7B;
+   box-shadow: inset 0px 18px 0px 0px           #FF4C4C,
+   inset 0 0 1px white, 0 2px 8px darken(white, 10%);
+   }
+
  h1 {
      margin: 0;
      font-family: 'Nunito', sans-serif;
+     line-height: 1.5em;
    }
 
  h2, h3, p, a {
       margin: 0;
       font-family: 'Varela Round', sans-serif;
+      line-height: 1.5em;
     }
 
  input {
@@ -30,7 +47,7 @@
 
  .flex-boxes {
    $base-border-radius: 3px !default;
-   $base-background-color: white !default;
+   $base-background-color: white;
    $dark-gray: #333 !default;
    $light-gray: #DDD !default;
    $base-font-color: $dark-gray !default;
@@ -41,7 +58,7 @@
    $flex-box-width: 18em;
    $flex-box-color: transparentize($base-font-color, 0.3);
    $flex-box-top-colors:
-     red,
+     #55FF1F,
      #72BFBF,
      #57FE22,
      #E3D743,
@@ -75,7 +92,7 @@
 
          &:focus,
          &:hover {
-           background-color: transparentize($color-from-list, 0.9);
+           background-color: transparentize($color-from-list, 0.2);
          }
        }
      }
@@ -97,6 +114,13 @@
        color: transparentize($flex-box-color, 0.1);
        line-height: 1.5em;
        margin: auto;
+     }
+
+     p.da {
+       color: transparentize($flex-box-color, 0.3);
+       line-height: 1.5em;
+       margin: auto;
+       font-size: 0.8em;
      }
    }
 
