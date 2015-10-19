@@ -10,4 +10,4 @@ All functionality is present with one exception.  When items are moved from one 
 <a href="mcjello.heroku.com">McJello on Heroku</a>
 
 # ERD
-<img src="/images/mcjello.png" />
+![ERD](https://github.com/McJello/McJello/blob/mcjosh/app/assets/images/McJello.png)
