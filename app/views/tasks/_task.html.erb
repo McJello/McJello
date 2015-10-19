@@ -1,5 +1,5 @@
-<%= form_for task, remote: true, data: { id: task.id } do |f| %>
-<a href="javascript:void(0)" class="flex-box" id="rumble-element">
+<%= form_for task, remote: true,remote: true, data: { id: task.id } do |f| %>
+<a href="javascript:void(0)" class="flex-box">
   <%= f.check_box :complete %>
   <%= f.submit "Complete" %>
   <h1 class="flex-title"><%= task.title %></h1>

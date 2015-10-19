@@ -25,13 +25,13 @@ $(function() {
   })
 })
 
-$('#rumble-element').jrumble({
+$('.rumble-element').jrumble({
 	x: 0,
 	y: 0,
 	rotation: 5
 });
 
-$('#rumble-element').bind({
+$('.rumble-element').bind({
 	'mousedown': function(){
 		$(this).trigger('startRumble');
 	},
